@@ -1,0 +1,18 @@
+[core]
+	excludesfile = /Users/adam187/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Adam Misiorny
+	email = adam.misiorny@gmail.com
+[push]
+	default = simple
+[alias]
+	unstage = reset HEAD --
+    ps = !git push && push-it.sh
+[color]
+	ui = true
