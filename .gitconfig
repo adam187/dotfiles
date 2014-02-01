@@ -13,6 +13,6 @@
 	default = simple
 [alias]
 	unstage = reset HEAD --
-    ps = !git push && push-it.sh
+	ps = !git push && push-it.sh
 [color]
 	ui = true
