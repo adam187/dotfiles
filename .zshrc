@@ -99,8 +99,9 @@ alias badge="tput bel"
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
 export PATH=~/bin:$PATH
+export PATH=$PATH:~/.composer/vendor/bin
+export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/php5/bin:$PATH
-export PATH=~/.composer/vendor/bin:$PATH
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
