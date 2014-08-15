@@ -14,6 +14,7 @@ zstyle ':completion:*' use-cache yes
 alias zshconfig="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 
+alias a="atom"
 alias .="pwd"
 alias db="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
@@ -46,9 +47,13 @@ alias arestart="sudo apachectl restart"
 
 # symfony
 alias sfcache="sudo rm -rf app/cache/* && sudo rm -rf app/logs/* && sudo chmod +a '_www allow delete,write,append,file_inherit,directory_inherit' app/cache app/logs && sudo chmod +a '`whoami` allow delete,write,append,file_inherit,directory_inherit' app/cache app/logs"
+alias sfdsu="sf doctrine:schema:update"
+alias sfdsuf="sfdsu --force"
+alias sfdsud="sfdsu --dump-sql"
 
 #alias phpcs="php-cs-fixer"
 alias fix="php-cs-fixer fix src/"
+alias fixme="php-cs-fixer fix ."
 alias hint="grunt hint"
 alias sismo="php ~/Projects/sismo.php"
 alias build="sismo build --force"
@@ -102,6 +107,7 @@ export PATH=~/bin:$PATH
 export PATH=$PATH:~/.composer/vendor/bin
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/php5/bin:$PATH
+export PATH=$PATH:/usr/local/sbin
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -144,7 +150,13 @@ alias mv="nocorrect mv -iv"
 alias st="sourcetree ."
 alias sst="st . && subl ."
 alias deploy="cap deploy"
+alias md5sum="md5 -r"
 
 #export SISMO_DATA_PATH=$HOME/Projects/.sismo/data/
 #export SISMO_CONFIG_PATH=$HOME/Projects/.sismo/config.php
 #export SISMO_STORAGE_PATH=$HOME/Projects/.sismo/storage.php
+
+export APP_ENV=dev
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
