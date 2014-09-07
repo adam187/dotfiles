@@ -15,7 +15,7 @@ alias zshconfig="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 
 alias a="atom"
-alias .="pwd"
+#alias .="pwd"
 alias db="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
@@ -28,6 +28,10 @@ alias s="subl ."
 alias mate="subl"
 #alias phpcs="php-cs-fixer"
 alias cw="compass watch"
+alias ngcu="noglob composer update"
+alias ngcub="noglob composer update bitnoise/*"
+alias bpu="nocorrect sh $HOME/Projects/packages/update.sh"
+alias pub="nocorrect sh $HOME/Projects/packages/update.sh"
 
 #git
 alias gs="git status"
@@ -59,7 +63,9 @@ alias sismo="php ~/Projects/sismo.php"
 alias build="sismo build --force"
 alias t="phpunit"
 alias tc="phpunit --coverage-html=cov"
-
+alias gt="grunt test"
+alias vgs="sh vgs.sh | grep -v ##"
+alias vgsb="sh vgs.sh"
 alias m="memcached -d -m 24 -p 11211"
 
 # open
@@ -138,7 +144,7 @@ export PATH=$PATH:/usr/local/sbin
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew capistrano sublime symfony2 bower composer cp history osx extract grunt)
+plugins=(git brew capistrano sublime symfony2 bower composer cp history osx extract grunt wd bd)
 #  gem battery
 
 source $ZSH/oh-my-zsh.sh
@@ -158,5 +164,16 @@ alias md5sum="md5 -r"
 
 export APP_ENV=dev
 
+export SYMFONY__DATABASE__USER=root
+export SYMFONY__DATABASE__PASSWORD=root
+export SYMFONY__DATABASE__HOST=localhost
+
+export SYMFONY__DATABASE_USER=root
+export SYMFONY__DATABASE_PASSWORD=root
+export SYMFONY__DATABASE_HOST=localhost
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# added by travis gem
+[ -f /Users/adam187/.travis/travis.sh ] && source /Users/adam187/.travis/travis.sh
